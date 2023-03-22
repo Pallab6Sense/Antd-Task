@@ -14,6 +14,7 @@ $font-24px: 24px;
 }
 .container {
   background: #f8f8f8;
+  padding-bottom: 30px;
 }
 
 .sideContainer {
@@ -139,34 +140,141 @@ $font-24px: 24px;
   justify-content: flex-end;
   margin-right: 20px;
 }
-.signIn{
+.signIn {
   display: flex;
   justify-content: center;
   margin-left: 20px;
 }
-.userIcon{
+.userIcon {
   margin-right: 20px;
 }
-.signinPara{
+.signinPara {
   @include itemsCenter();
   font-family: $fontPrimary;
   color: #999898;
   font-weight: 550;
 }
-.settings{
+.settings {
   // display: flex;
   // justify-content: center;
   // align-content: center;
   margin-left: 20px;
-
 }
-.notification{
+.notification {
   margin-left: 20px;
-
 }
-:where(.css-dev-only-do-not-override-mxhywb).ant-layout-header{
+:where(.css-dev-only-do-not-override-mxhywb).ant-layout-header {
   padding-inline: 0px;
 }
+.ant-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.gridContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+  justify-content: center;
+}
+.descDiv {
+  display: flex;
+  justify-content: center;
+  background: white;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.desc {
+  margin-right: 40px;
+}
+.desc p {
+  font-size: $font-14px;
+  font-family: $fontPrimary;
+  color: #999898;
+}
+
+.desc > .bold {
+  font-size: $font-30px;
+  color: black;
+}
+.desc > .bold sub {
+  color: #52c41a;
+  font-size: $font-16px;
+}
+
+.descIcon {
+  display: flex;
+  // justify-content: center;
+  // align-content: center;
+  align-items: center;
+  // width: 60px;
+  // height: 60px;
+}
+
+.ant-table-timeline {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+}
+.table {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin-right: 20px;
+  width: 800px;
+}
+
+.tableTop {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.tableHeading {
+  font-size: $font-16px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.tableDesc {
+  color: #999898;
+  font-weight: 550;
+}
+
+.antTimeline {
+  // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 20px;
+  // padding: 20px;
+  // padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.data-div {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.data-img{
+  width: 25px;
+   margin-right: 20px;
+}
+
+.data-text{
+  font-family: $fontPrimary;
+  font-weight: 550;
+  font-size: 12px;
+  color: black;
+}
+
 @media (max-width: 770px) {
   .ant-sider {
     display: none;
@@ -197,7 +305,7 @@ $font-24px: 24px;
     margin-left: 5px;
     margin-right: 5px;
   }
-  .signinPara{
+  .signinPara {
     display: none;
   }
 
@@ -208,8 +316,98 @@ $font-24px: 24px;
     margin-left: 5px;
     margin-right: 5px;
   }
+  .ant-content {
+    display: flex;
+    justify-content: center;
+  }
+  .gridContainer {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    justify-content: center;
+  }
+  .descDiv {
+    display: flex;
+    justify-content: flex-start;
+    background: white;
+    height: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
 
-  :where(.css-dev-only-do-not-override-mxhywb).ant-layout-header{
-    padding-inline: 0px;
+  .desc {
+    margin-right: 40px;
+  }
+  .desc p {
+    font-size: $font-14px;
+    font-family: $fontPrimary;
+    color: #999898;
+  }
+
+  .desc > .bold {
+    font-size: $font-30px;
+    color: black;
+  }
+  .desc > .bold sub {
+    color: #52c41a;
+    font-size: $font-16px;
+  }
+
+  .descIcon {
+    display: flex;
+    justify-content: flex-end;
+    // align-content: center;
+    align-items: center;
+    // width: 60px;
+    // height: 60px;
+  }
+
+  .ant-table-timeline {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  .table {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 100vw;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .tableTop {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+  .tableHeading {
+    font-size: $font-16px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  .tableDesc {
+    color: #999898;
+    font-weight: 550;
+  }
+
+  .antTimeline {
+    // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 20px;
+    // padding: 20px;
+    padding: 10px;
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+  
+  .timeLine {
+    display: flex;
+    flex-direction: column;
   }
 }

@@ -2,6 +2,9 @@ import Head from 'next/head';
 import { Layout, Space } from 'antd';
 import SideBar from './SideBar';
 import Hea_Der from './Header';
+import TopGrid from './TopGrid';
+import AntTable from './AntTable';
+import AntTimeline from './AntTimeline';
 const { Header, Footer, Sider, Content } = Layout;
 const headerStyle = {
   textAlign: 'center',
@@ -46,12 +49,24 @@ const Lay_out = () => {
             </Sider>
           </div>
           <Layout>
-              <Header className="ant-header"><Hea_Der></Hea_Der></Header>
-            <div >
-            </div>
-            <div className="ant-content">
-              <Content style={contentStyle}>Content</Content>
-            </div>
+            <Header className="ant-header">
+              <Hea_Der></Hea_Der>
+            </Header>
+            <div></div>
+            <Content className="ant-content">
+              <TopGrid></TopGrid>
+              
+              <div className="ant-table-timeline">
+                <div className="antTable">
+                  <AntTable></AntTable>
+                </div>
+
+                <div className="antTimeline">
+                  <AntTimeline></AntTimeline>
+                </div>
+
+              </div>
+            </Content>
           </Layout>
         </Layout>
       </div>
