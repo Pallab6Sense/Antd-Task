@@ -1,0 +1,106 @@
+$fontPrimary: 'open sans';
+$font-14px: 14px;
+$font-16px: 16px;
+$font-30px: 30px;
+$font-24px: 24px;
+@mixin itemsCenter {
+  display: flex;
+  justify-content: center;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  background: #f8f8f8;
+}
+
+.sideContainer {
+  background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+}
+.heading {
+  display: flex;
+  justify-content: center;
+}
+.paragraph {
+  display: flex;
+  justify-content: center;
+  font-family: $fontPrimary;
+  font-size: $font-14px;
+  padding-left: 10px;
+  color: #999898;
+  font-weight: 600;
+}
+.icon {
+  display: flex;
+  justify-content: center;
+}
+.icon img {
+  width: 30px;
+}
+
+.mainitems {
+  display: flex;
+  // justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+
+  padding: 10px;
+  flex-direction: column;
+}
+
+.items {
+  @include itemsCenter();
+  align-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.items-icon {
+  @include itemsCenter();
+}
+.items-paragraph {
+  @include itemsCenter();
+  padding-left: 10px;
+  font-family: $fontPrimary;
+  font-size: $font-14px;
+  font-weight: 550;
+  color: #999898;
+  cursor: pointer;
+}
+.items:focus {
+  background: white;
+  padding: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.accountPages {
+  display: flex;
+  // justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+
+  padding: 10px;
+  flex-direction: column;
+}
+
+.accountPages p{
+  font-size: $font-14px;
+  font-family: $fontPrimary;
+  font-weight: 550;
+  color: #999898;
+}
+.items p{
+  font-weight: 100;
+  color: black;
+}
+
+@media (max-width: 770px) {
+  .ant-sider{
+    display: none;
+  }
+}
