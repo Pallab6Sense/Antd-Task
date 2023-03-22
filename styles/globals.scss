@@ -88,19 +88,128 @@ $font-24px: 24px;
   flex-direction: column;
 }
 
-.accountPages p{
+.accountPages p {
   font-size: $font-14px;
   font-family: $fontPrimary;
   font-weight: 550;
   color: #999898;
 }
-.items p{
+.items p {
   font-weight: 100;
   color: black;
 }
+.ant-header {
+  background: #f8f8f8;
+  display: flex;
+  // justify-content: center;
+  height: fit-content;
+  width: 100%;
+}
+.headerContainer {
+  background: #f8f8f8;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  // flex-direction: column;
+  // margin: 30px;
+  padding: 20px;
+}
 
+.antBreadcrumb {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-size: $font-14px;
+  font-family: $fontPrimary;
+}
+.bread {
+  display: flex;
+  justify-content: flex-start;
+}
+.dashboard {
+  display: flex;
+  justify-content: flex-start;
+  font-size: $font-14px;
+  font-family: $fontPrimary;
+  font-weight: 600;
+  margin-top: -20px;
+}
+.rightSide {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+.signIn{
+  display: flex;
+  justify-content: center;
+  margin-left: 20px;
+}
+.userIcon{
+  margin-right: 20px;
+}
+.signinPara{
+  @include itemsCenter();
+  font-family: $fontPrimary;
+  color: #999898;
+  font-weight: 550;
+}
+.settings{
+  // display: flex;
+  // justify-content: center;
+  // align-content: center;
+  margin-left: 20px;
+
+}
+.notification{
+  margin-left: 20px;
+
+}
+:where(.css-dev-only-do-not-override-mxhywb).ant-layout-header{
+  padding-inline: 0px;
+}
 @media (max-width: 770px) {
-  .ant-sider{
+  .ant-sider {
     display: none;
+  }
+  .ant-header {
+    background: #f8f8f8;
+    display: flex;
+    // justify-content: center;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+  }
+  .headerContainer {
+    background: #f8f8f8;
+    display: flex;
+    justify-content: space-between;
+    // width: 100%;
+    flex-direction: column;
+    // margin: 30px;
+    padding: 10px;
+  }
+  .antBreadcrumb {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-size: $font-14px;
+    font-family: $fontPrimary;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .signinPara{
+    display: none;
+  }
+
+  .rightSide {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -20px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  :where(.css-dev-only-do-not-override-mxhywb).ant-layout-header{
+    padding-inline: 0px;
   }
 }

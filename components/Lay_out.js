@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { Layout, Space } from 'antd';
 import SideBar from './SideBar';
+import Hea_Der from './Header';
 const { Header, Footer, Sider, Content } = Layout;
 const headerStyle = {
   textAlign: 'center',
@@ -45,8 +46,8 @@ const Lay_out = () => {
             </Sider>
           </div>
           <Layout>
-            <div className="ant-header">
-              <Header>Header</Header>
+              <Header className="ant-header"><Hea_Der></Hea_Der></Header>
+            <div >
             </div>
             <div className="ant-content">
               <Content style={contentStyle}>Content</Content>
