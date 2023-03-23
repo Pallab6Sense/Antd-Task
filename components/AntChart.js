@@ -1,5 +1,3 @@
-import ReactDOM from 'react-dom';
-// import { Column } from '@ant-design/plots';
 import dynamic from 'next/dynamic';
 const Column = dynamic(
   () => import('@ant-design/plots').then(({ Column }) => Column),
