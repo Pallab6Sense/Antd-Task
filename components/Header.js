@@ -117,7 +117,7 @@ export default function Hea_Der() {
       placement,
       style: {
         top: '90px',
-        left: '-245px',
+        left: '-5px',
         width: '280px',
       },
       closeIcon: null,

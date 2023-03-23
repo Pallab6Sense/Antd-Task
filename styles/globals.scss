@@ -281,21 +281,17 @@ $font-24px: 24px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.upload-container {
-  width: 400px;
+// .upload-container {
+//   width: 400px;
 
-  margin: 20px 0px;
-}
+//   margin: 20px 0px;
+// }
 .uploadDiv {
   width: 700px;
   // display: flex;
   // justify-content: center;
   // justify-items: center;
   margin: 20px 0px;
-}
-.ant-upload {
-  width: 700px;
-  // padding: 20px;
 }
 .data-div {
   display: flex;
@@ -313,7 +309,23 @@ $font-24px: 24px;
   font-size: 12px;
   color: black;
 }
-
+.ant-upload {
+  // width: 700px;
+  // padding: 20px;
+}
+.uploadIcon{
+  // padding-left: 40px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.upload-container{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  margin: 10px;
+}
 @media (max-width: 770px) {
   html,body{
     overflow-x: hidden;

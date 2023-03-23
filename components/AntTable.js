@@ -1,15 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import {
-  Space,
-  Table,
-  Tag,
-  Radio,
-  Avatar,
-  Tooltip,
-  Progress,
-  Upload,
-  Button,
-} from 'antd';
+import { Table, Radio, Avatar, Tooltip, Progress, Upload, Button } from 'antd';
 import {
   UserOutlined,
   AntDesignOutlined,
@@ -277,7 +267,58 @@ const data = [
       />
     ),
   },
+  {
+    key: '6',
+    name: (
+      <>
+        <div className="data-div">
+          <img
+            className="data-img"
+            src="https://demos.creative-tim.com/muse-vue-ant-design-dashboard/images/logos/logo-invision.svg"
+            alt=""
+          />
+          <p className="data-text"> Redesign Online Store</p>
+        </div>
+      </>
+    ),
+    avatar: (
+      <>
+        <Avatar.Group>
+          <Avatar src="https://demos.creative-tim.com/muse-vue-ant-design-dashboard/images/face-1.jpg" />
+          <a href="https://ant.design">
+            <Avatar
+              src="https://demos.creative-tim.com/muse-vue-ant-design-dashboard/images/face-4.jpg"
+              style={{
+                backgroundColor: '#f56a00',
+              }}
+            >
+              K
+            </Avatar>
+          </a>
+          <Tooltip title="Ant User" placement="top">
+            <Avatar
+              src="https://demos.creative-tim.com/muse-vue-ant-design-dashboard/images/face-3.jpg"
+              style={{
+                backgroundColor: '#87d068',
+              }}
+              icon={<UserOutlined />}
+            />
+          </Tooltip>
+        </Avatar.Group>
+      </>
+    ),
+    budget: '$200',
+    progress: (
+      <Progress
+        percent={100}
+        format={() => <p style={{ color: 'black' }}>Cancelled</p>}
+        size="small"
+        status="exception"
+      />
+    ),
+  },
 ];
+
 const AntTable = () => {
   return (
     <>
@@ -308,18 +349,9 @@ const AntTable = () => {
             x: 500,
           }}
         />
-        {/* <Table
-          className="mainTableMobile"
-          size="small"
-          pagination={false}
-          columns={columns}
-          dataSource={data}
-          scroll={{
-            x: 600,
-          }}
-        /> */}
+
         <div className="upload-container">
-          <Upload >
+          <Upload className="uploadIcon">
             <Button icon={<UploadOutlined />}>Click to Upload</Button>
           </Upload>
         </div>
