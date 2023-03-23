@@ -47,7 +47,6 @@ $font-24px: 24px;
 
 .mainitems {
   display: flex;
-  // justify-content: center;
   align-items: flex-start;
   align-content: center;
 
@@ -81,7 +80,6 @@ $font-24px: 24px;
 }
 .accountPages {
   display: flex;
-  // justify-content: center;
   align-items: flex-start;
   align-content: center;
 
@@ -102,7 +100,6 @@ $font-24px: 24px;
 .ant-header {
   background: #f8f8f8;
   display: flex;
-  // justify-content: center;
   height: fit-content;
   width: 100%;
   z-index: 0;
@@ -112,8 +109,6 @@ $font-24px: 24px;
   display: flex;
   justify-content: space-between;
   width: 100%;
-  // flex-direction: column;
-  // margin: 30px;
   padding: 20px;
 }
 
@@ -156,9 +151,6 @@ $font-24px: 24px;
   font-weight: 550;
 }
 .settings {
-  // display: flex;
-  // justify-content: center;
-  // align-content: center;
   margin-left: 20px;
 }
 .notification {
@@ -230,27 +222,28 @@ $font-24px: 24px;
 
 .descIcon {
   display: flex;
-  // justify-content: center;
-  // align-content: center;
   align-items: center;
-  // width: 60px;
-  // height: 60px;
 }
 
 .ant-table-timeline {
   display: flex;
   margin-top: 20px;
-  justify-content: center;
+  justify-content: space-between;
   padding: 10px;
   width: auto;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 .table {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background: white;
   border-radius: 20px;
   padding: 20px;
-  margin-right: 20px;
+  // margin-right: 20px;
   width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .tableTop {
@@ -269,28 +262,18 @@ $font-24px: 24px;
 }
 
 .antTimeline {
-  // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   display: flex;
   flex-direction: column;
   background: white;
   border-radius: 20px;
-  // padding: 20px;
-  // padding: 10px;
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-// .upload-container {
-//   width: 400px;
 
-//   margin: 20px 0px;
-// }
 .uploadDiv {
   width: 700px;
-  // display: flex;
-  // justify-content: center;
-  // justify-items: center;
   margin: 20px 0px;
 }
 .data-div {
@@ -309,31 +292,67 @@ $font-24px: 24px;
   font-size: 12px;
   color: black;
 }
-.ant-upload {
-  // width: 700px;
-  // padding: 20px;
-}
-.uploadIcon{
-  // padding-left: 40px;
+
+.uploadIcon {
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
 }
-.upload-container{
+.upload-container {
   display: flex;
   justify-content: center;
   align-content: center;
   width: 100%;
   margin: 10px;
 }
-@media (max-width: 770px) {
-  html,body{
-    overflow-x: hidden;
+
+.antColumnChart {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  // width: 400px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  // position: relative;
+  // left: 30px;
+  // margin-top: 20px;
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-top: 20px;
 }
+.antChart {
+  background: rgb(0, 70, 198);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 70, 198, 1) 0%,
+    rgba(32, 102, 253, 1) 53%,
+    rgba(147, 137, 255, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 20px;
+}
+.antChartMobile {
+  display: none;
+}
+.bottomDesc {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+@media (max-width: 770px) {
+  html,
+  body {
+    overflow-x: hidden;
+    background: #f8f8f8;
+  }
   .container {
     background: #f8f8f8;
-    // padding-bottom: 30px;
-    max-width: 360px;
+    // max-width: 360px;
     margin: 0 0;
   }
   .ant-sider {
@@ -342,7 +361,6 @@ $font-24px: 24px;
   .ant-header {
     background: #f8f8f8;
     display: flex;
-    // justify-content: center;
     height: fit-content;
     width: fit-content;
     padding: 10px;
@@ -351,9 +369,7 @@ $font-24px: 24px;
     background: #f8f8f8;
     display: flex;
     justify-content: space-between;
-    // width: 100%;
     flex-direction: column;
-    // margin: 30px;
     padding: 10px;
   }
   .antBreadcrumb {
@@ -385,8 +401,8 @@ $font-24px: 24px;
     grid-template-columns: 100%;
     grid-gap: 10px;
     justify-content: center;
-    margin-left:10px;
-    margin-right:10px;
+    margin: 10px;
+    padding: 10px 0px;
   }
   .descDiv {
     display: flex;
@@ -419,10 +435,7 @@ $font-24px: 24px;
   .descIcon {
     display: flex;
     justify-content: flex-end;
-    // align-content: center;
     align-items: center;
-    // width: 60px;
-    // height: 60px;
   }
 
   .ant-table-timeline {
@@ -430,18 +443,23 @@ $font-24px: 24px;
     flex-direction: column;
     margin-top: 20px;
     justify-content: center;
-    width: 100vw;
+    margin-left: 0px;
+    margin-right: 10px;
+    width: 100%;
   }
   .table {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    max-width: 100%;
-
+    // max-width: 100%;
+    width: 100%;
     background: white;
     border-radius: 20px;
     padding: 20px;
-    margin-right: 20px;
+    margin-right: 0px;
+    // margin-left: 10px;
     margin-bottom: 20px;
-    // display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .tableTop {
@@ -460,15 +478,13 @@ $font-24px: 24px;
   }
 
   .antTimeline {
-    // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     display: flex;
     flex-direction: column;
     background: white;
     border-radius: 20px;
-    // padding: 20px;
     padding: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
+    // margin-left: 5px;
+    // margin-right: 5px;
   }
 
   .timeLine {
@@ -476,12 +492,40 @@ $font-24px: 24px;
     flex-direction: column;
   }
   .notification {
-    // margin-left: 20px;
     display: none;
   }
   .notification-mobile {
     display: inline-block;
     cursor: pointer;
     margin-left: 10px;
+  }
+
+  .antColumnChart {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 20px;
+    display: none;
+  }
+  .antChart {
+    display: none;
+  }
+  .antChartMobile {
+    display: inline-block;
+    background: rgb(0, 70, 198);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 70, 198, 1) 0%,
+      rgba(32, 102, 253, 1) 53%,
+      rgba(147, 137, 255, 1) 100%
+    );
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 20px;
   }
 }
