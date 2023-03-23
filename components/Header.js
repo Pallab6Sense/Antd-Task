@@ -1,15 +1,129 @@
-import { Breadcrumb, Input,Drawer } from 'antd';
-import { SearchOutlined, UserOutlined,SettingFilled,NotificationFilled } from '@ant-design/icons';
+/* eslint-disable @next/next/no-img-element */
+import { Breadcrumb, Input, Drawer, Badge, Avatar, notification } from 'antd';
+import {
+  SearchOutlined,
+  UserOutlined,
+  SettingFilled,
+  NotificationFilled,
+  BorderTopOutlined,
+} from '@ant-design/icons';
 import { useState } from 'react';
 
 export default function Hea_Der() {
-    const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   const showDrawer = () => {
     setOpen(true);
   };
   const onClose = () => {
     setOpen(false);
   };
+
+  const [api, contextHolder] = notification.useNotification();
+  const [apiMobile, contextHolderMobile] = notification.useNotification();
+
+  const openNotification = (placement) => {
+    api.open({
+      description: (
+        <>
+          <div className="notification-div">
+            <div className="notification-left">
+              <img
+                src="https://demos.creative-tim.com/muse-vue-ant-design-dashboard/images/face-1.jpg"
+                alt=""
+              />
+            </div>
+            <div className="right">
+              <p>New message from Sophie</p>
+              <span>13 minutes ago</span>
+            </div>
+          </div>
+          <div className="notification-div">
+            <div className="notification-left">
+              <img
+                src="spotify-2.svg"
+                alt=""
+              />
+            </div>
+            <div className="right">
+              <p>New Album by Travis Scott</p>
+              <span>1 day ago</span>
+            </div>
+          </div>
+          <div className="notification-div">
+            <div className="notification-left">
+              <img
+                src="nfc.png"
+                alt=""
+              />
+            </div>
+            <div className="right">
+              <p >Payment completed</p>
+              <span>2 days ago</span>
+            </div>
+          </div>
+        </>
+      ),
+      placement,
+      style: {
+        top: '50px',
+        left: '570px',
+        width: '270px',
+      },
+      closeIcon: null,
+    });
+  };
+  const openNotification1 = (placement) => {
+    apiMobile.open({
+      description: (
+        <>
+          <div className="notification-div">
+            <div className="notification-left">
+              <img
+                src="https://demos.creative-tim.com/muse-vue-ant-design-dashboard/images/face-1.jpg"
+                alt=""
+              />
+            </div>
+            <div className="right">
+              <p>New message from Sophie</p>
+              <span>13 minutes ago</span>
+            </div>
+          </div>
+          <div className="notification-div">
+            <div className="notification-left">
+              <img
+                src="spotify-2.svg"
+                alt=""
+              />
+            </div>
+            <div className="right">
+              <p>New Album by Travis Scott</p>
+              <span>1 day ago</span>
+            </div>
+          </div>
+          <div className="notification-div">
+            <div className="notification-left">
+              <img
+                src="nfc.png"
+                alt=""
+              />
+            </div>
+            <div className="right">
+              <p >Payment completed</p>
+              <span>2 days ago</span>
+            </div>
+          </div>
+        </>
+      ),
+      placement,
+      style: {
+        top: '90px',
+        left: '-245px',
+        width: '280px',
+      },
+      closeIcon: null,
+    });
+  };
+
   return (
     <div className="headerContainer">
       <div className="antBreadcrumb">
@@ -49,18 +163,31 @@ export default function Hea_Der() {
         </div>
 
         <div className="settings">
-        <SettingFilled onClick={showDrawer} />
-        <Drawer title="Basic Drawer" placement="right" onClose={onClose} open={open}>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-      </Drawer>
-        </div>
-        
-        <div className="notification">
-        <NotificationFilled />
+          <SettingFilled onClick={showDrawer} />
+          <Drawer
+            title="Basic Drawer"
+            placement="right"
+            onClose={onClose}
+            open={open}
+          >
+            <p>Some contents...</p>
+            <p>Some contents...</p>
+            <p>Some contents...</p>
+          </Drawer>
         </div>
 
+        <div className="notification">
+          {contextHolder}
+          <Badge count={4} size="small" onClick={() => openNotification('top')}>
+            <NotificationFilled />
+          </Badge>
+        </div>
+        <div className="notification-mobile">
+          {contextHolderMobile}
+          <Badge count={4} size="small" onClick={() => openNotification1('top')}>
+            <NotificationFilled />
+          </Badge>
+        </div>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ const AntTimeline = () => {
     <div className="antTimeline">
       <div className="timelineTop">
         <div className="tableHeading">
-          <p>Orders History</p>
+          <p style={{fontWeight:'700'}}>Orders History</p>
           <p className="tableDesc">
             This month <span style={{ color: '#52c41a' }}>+20%</span>
           </p>
