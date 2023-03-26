@@ -53,7 +53,7 @@ const AntChart = () => {
       },
     },
     columnStyle: {
-      radius: [20, 20, 20, 20],
+      radius: [6, 6, 6, 6],
     },
     height: 300,
     width: 700,
@@ -74,6 +74,7 @@ const AntChart = () => {
     minColumnWidth: 20,
     maxColumnWidth: 20,
   };
+
   const configMobile = {
     data,
     xField: 'type',
@@ -85,7 +86,7 @@ const AntChart = () => {
       },
     },
     columnStyle: {
-      radius: [20, 20, 20, 20],
+      radius: [6, 6, 6, 6],
     },
     height: 190,
     width: 270,
