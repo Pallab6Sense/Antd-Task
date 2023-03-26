@@ -6,7 +6,8 @@ const AntTimeline = () => {
     setReverse(!reverse);
   };
   return (
-    <div className="antTimeline">
+   <>
+   
       <div className="timelineTop">
         <div className="tableHeading">
           <p style={{fontWeight:'700'}}>Orders History</p>
@@ -78,7 +79,7 @@ const AntTimeline = () => {
          Reverse
         </Button>
       </div>
-    </div>
+      </>
   );
 };
 export default AntTimeline;

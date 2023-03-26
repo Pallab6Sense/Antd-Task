@@ -484,7 +484,7 @@ $font-24px: 24px;
     flex-direction: column;
     background: white;
     border-radius: 20px;
-    padding: 5px;
+    padding: 15px;
     // margin-left: 5px;
     // margin-right: 5px;
   }
@@ -653,6 +653,9 @@ $font-24px: 24px;
     margin-right: 0px;
     // width: 100%;
   }
+  .antTable {
+    display: flex;
+  }
   .table {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     // max-width: 100%;
@@ -742,7 +745,7 @@ $font-24px: 24px;
   }
 }
 
-@media (min-width: 993px) and (max-width: 1439px) {
+@media (min-width: 993px) and (max-width: 1300px) {
   .container {
     background: #f8f8f8;
     padding-bottom: 30px;
@@ -964,8 +967,16 @@ $font-24px: 24px;
     justify-content: space-between;
     padding: 10px;
     // width: auto;
-    margin-left: 1%;
-    margin-right: 1%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  .antTable {
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    flex-basis: 59%;
+    margin-right: 1.5%;
+
   }
   .table {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -973,12 +984,10 @@ $font-24px: 24px;
     border-radius: 20px;
     padding: 15px;
     // margin-right: 20px;
-    // width: 800px;
+    width: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-basis: 59%;
-    margin-right: 1.5%;
   }
 
   .tableTop {
@@ -999,7 +1008,7 @@ $font-24px: 24px;
     font-weight: 550;
   }
 
-  :where(.css-dev-only-do-not-override-mxhywb).ant-spin-nested-loading{
+  :where(.css-dev-only-do-not-override-mxhywb).ant-spin-nested-loading {
     padding: 10px 0px;
   }
 
@@ -1008,12 +1017,12 @@ $font-24px: 24px;
     flex-direction: column;
     background: white;
     border-radius: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
     padding-top: 10px;
     padding-bottom: 10px;
-    flex-basis: 39%;
-
+    flex-basis: 38%;
+    // width: 100%;
   }
 
   .uploadDiv {
@@ -1089,12 +1098,12 @@ $font-24px: 24px;
   }
 }
 
-@media (min-width:2000px){
+@media (min-width: 1800px) {
   .container {
     background: #f8f8f8;
     padding-bottom: 30px;
   }
-  
+
   .sideContainer {
     background: #f8f8f8;
     display: flex;
@@ -1123,23 +1132,23 @@ $font-24px: 24px;
   .icon img {
     width: 30px;
   }
-  
+
   .mainitems {
     display: flex;
     align-items: flex-start;
     align-content: center;
-  
+
     padding: 10px;
     flex-direction: column;
   }
-  
+
   .items {
     @include itemsCenter();
     align-content: center;
     padding-top: 10px;
     padding-bottom: 10px;
   }
-  
+
   .items-icon {
     @include itemsCenter();
   }
@@ -1162,11 +1171,11 @@ $font-24px: 24px;
     display: flex;
     align-items: flex-start;
     align-content: center;
-  
+
     padding: 10px;
     flex-direction: column;
   }
-  
+
   .accountPages p {
     font-size: $font-14px;
     font-family: $fontPrimary;
@@ -1191,7 +1200,7 @@ $font-24px: 24px;
     width: 100%;
     padding: 10px 20px;
   }
-  
+
   .antBreadcrumb {
     display: flex;
     justify-content: flex-start;
@@ -1282,7 +1291,7 @@ $font-24px: 24px;
     border-radius: 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
-  
+
   .desc {
     margin-right: 40px;
   }
@@ -1291,7 +1300,7 @@ $font-24px: 24px;
     font-family: $fontPrimary;
     color: #999898;
   }
-  
+
   .desc > .bold {
     font-size: $font-30px;
     color: black;
@@ -1300,24 +1309,24 @@ $font-24px: 24px;
     color: #52c41a;
     font-size: $font-16px;
   }
-  
+
   .descIcon {
     display: flex;
     align-items: center;
   }
-  
+
   .ant-table-timeline {
     display: flex;
     margin-top: 20px;
     justify-content: space-between;
     padding: 10px;
     margin: 1% 2.5%;
-
   }
 
-  .antTable{
-    width: 100%;
-    // display: flex;
+  .antTable {
+    // width: 100%;
+    display: flex;
+    flex-basis: 60%;
   }
   .table {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -1325,15 +1334,13 @@ $font-24px: 24px;
     border-radius: 20px;
     padding: 20px;
     // margin-right: 20px;
-    // width: 800px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     // width: 100%;
-    flex-basis: 59%;
-    margin-right: 2%;
   }
-  
+
   .tableTop {
     display: flex;
     justify-content: space-between;
@@ -1348,7 +1355,7 @@ $font-24px: 24px;
     color: #999898;
     font-weight: 550;
   }
-  
+
   .antTimeline {
     display: flex;
     flex-direction: column;
@@ -1359,9 +1366,8 @@ $font-24px: 24px;
     padding-top: 10px;
     padding-bottom: 10px;
     flex-basis: 39%;
-
   }
-  
+
   .uploadDiv {
     width: 700px;
     margin: 20px 0px;
@@ -1370,19 +1376,19 @@ $font-24px: 24px;
     display: flex;
     justify-content: flex-start;
   }
-  
+
   .data-img {
     width: 25px;
     margin-right: 20px;
   }
-  
+
   .data-text {
     font-family: $fontPrimary;
     font-weight: 550;
     font-size: 12px;
     color: black;
   }
-  
+
   .uploadIcon {
     width: 100%;
     padding: 10px;
@@ -1395,7 +1401,7 @@ $font-24px: 24px;
     width: 100%;
     margin: 10px;
   }
-  
+
   .antColumnChart {
     display: flex;
     justify-content: center;
@@ -1407,8 +1413,8 @@ $font-24px: 24px;
     // position: relative;
     // left: 30px;
     margin-top: 20px;
-    margin-left: 65px;
-    margin-right: 65px;
+    margin-left: 3%;
+    margin-right: 3%;
     margin-top: 20px;
   }
   .antChart {

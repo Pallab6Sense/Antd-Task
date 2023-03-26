@@ -33,13 +33,14 @@ const Lay_out = () => {
               <AntChart />
             </div>
             <div className="ant-table-timeline">
+
               <div className="antTable">
                 <AntTable />
               </div>
-
               <div className="antTimeline">
                 <AntTimeline />
               </div>
+              
             </div>
           </Content>
         </Layout>

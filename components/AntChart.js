@@ -1,3 +1,4 @@
+import { Skeleton, Spin } from 'antd';
 import dynamic from 'next/dynamic';
 const Column = dynamic(
   () => import('@ant-design/plots').then(({ Column }) => Column),
@@ -59,7 +60,7 @@ const AntChart = () => {
     width: 700,
     label: {
       style: {
-        color: '#FFFFFF', // set the text color to gray
+        color: '#FFFFFF',
       },
     },
     color: 'white',
@@ -107,8 +108,10 @@ const AntChart = () => {
     minColumnWidth: 20,
     maxColumnWidth: 20,
   };
+
   return (
     <>
+    {/* <Spin size='large'></Spin> */}
       <div className="antChart">
         <Column {...config} />
       </div>
