@@ -165,7 +165,7 @@ export default function Hea_Der() {
 
         <div className="settings">
           <SettingFilled onClick={showDrawer} />
-          <Drawer
+          {/* <Drawer
             title="Basic Drawer"
             placement="right"
             onClose={onClose}
@@ -174,7 +174,7 @@ export default function Hea_Der() {
             <p>Some contents...</p>
             <p>Some contents...</p>
             <p>Some contents...</p>
-          </Drawer>
+          </Drawer> */}
         </div>
 
         <div className="notification">
