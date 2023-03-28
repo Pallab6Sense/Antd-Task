@@ -66,8 +66,9 @@ export default function Hea_Der() {
       placement,
       style: {
         top: '50px',
-        left: '570px',
+        left: '780px',
         width: '270px',
+        position:'relative'
       },
       closeIcon: null,
     });

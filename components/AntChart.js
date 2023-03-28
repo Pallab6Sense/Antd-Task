@@ -56,8 +56,8 @@ const AntChart = () => {
     columnStyle: {
       radius: [6, 6, 6, 6],
     },
-    height: 300,
-    width: 700,
+    height: 400,
+    width: 1100,
     label: {
       style: {
         color: '#FFFFFF',
