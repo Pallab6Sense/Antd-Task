@@ -1,15 +1,24 @@
 /* eslint-disable @next/next/no-img-element */
-import { Breadcrumb, Input, Badge, notification } from 'antd';
+import { Breadcrumb, Input, Badge, notification,Button, Drawer } from 'antd';
 import {
   SearchOutlined,
   UserOutlined,
   SettingFilled,
   NotificationFilled,
+  MenuOutlined
 } from '@ant-design/icons';
+import { useState } from 'react';
+import SideBar from './SideBar';
 
 export default function Hea_Der() {
+  const [open, setOpen] = useState(false);
+
   const showDrawer = () => {
     setOpen(true);
+  };
+
+  const onClose = () => {
+    setOpen(false);
   };
 
   const [api, contextHolder] = notification.useNotification();
@@ -107,6 +116,8 @@ export default function Hea_Der() {
     });
   };
 
+  
+
   return (
     <div className="headerContainer">
       <div className="antBreadcrumb">
@@ -143,6 +154,21 @@ export default function Hea_Der() {
           <div className="signinPara">
             <p>Sign in</p>
           </div>
+        </div>
+
+        <div className="hamburger">
+          <MenuOutlined onClick={showDrawer}></MenuOutlined>
+          <Drawer
+            // title="Basic Drawer"
+            placement="left"
+            onClose={onClose}
+            open={open}
+            closable={false}
+            width="80%"
+            className='sideDrawer'
+          >
+           <SideBar></SideBar>
+          </Drawer>
         </div>
 
         <div className="settings">

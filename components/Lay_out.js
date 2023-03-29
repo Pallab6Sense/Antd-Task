@@ -18,7 +18,7 @@ const Lay_out = () => {
     <div className="container">
       <Layout>
         <div className="ant-sider">
-          <Sider>
+          <Sider breakpoint={"lg"} collapsedWidth={0} trigger={null}>
             <SideBar />
           </Sider>
         </div>
