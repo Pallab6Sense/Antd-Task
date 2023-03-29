@@ -157,6 +157,7 @@ $font-24px: 24px;
 .notification {
   margin-left: 20px;
   cursor: pointer;
+  position: relative;
 }
 .notification-mobile {
   display: none;

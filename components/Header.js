@@ -1,21 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
-import { Breadcrumb, Input, Drawer, Badge, Avatar, notification } from 'antd';
+import { Breadcrumb, Input, Badge, notification } from 'antd';
 import {
   SearchOutlined,
   UserOutlined,
   SettingFilled,
   NotificationFilled,
-  BorderTopOutlined,
 } from '@ant-design/icons';
-import { useState } from 'react';
 
 export default function Hea_Der() {
-  const [open, setOpen] = useState(false);
   const showDrawer = () => {
     setOpen(true);
-  };
-  const onClose = () => {
-    setOpen(false);
   };
 
   const [api, contextHolder] = notification.useNotification();
@@ -39,10 +33,7 @@ export default function Hea_Der() {
           </div>
           <div className="notification-div">
             <div className="notification-left">
-              <img
-                src="spotify-2.svg"
-                alt=""
-              />
+              <img src="spotify-2.svg" alt="" />
             </div>
             <div className="right">
               <p>New Album by Travis Scott</p>
@@ -51,13 +42,10 @@ export default function Hea_Der() {
           </div>
           <div className="notification-div">
             <div className="notification-left">
-              <img
-                src="nfc.png"
-                alt=""
-              />
+              <img src="nfc.png" alt="" />
             </div>
             <div className="right">
-              <p >Payment completed</p>
+              <p>Payment completed</p>
               <span>2 days ago</span>
             </div>
           </div>
@@ -65,10 +53,10 @@ export default function Hea_Der() {
       ),
       placement,
       style: {
-        top: '50px',
-        left: '780px',
+        top: '30px',
+        left: '450px',
         width: '270px',
-        position:'relative'
+        position: 'absolute',
       },
       closeIcon: null,
     });
@@ -91,10 +79,7 @@ export default function Hea_Der() {
           </div>
           <div className="notification-div">
             <div className="notification-left">
-              <img
-                src="spotify-2.svg"
-                alt=""
-              />
+              <img src="spotify-2.svg" alt="" />
             </div>
             <div className="right">
               <p>New Album by Travis Scott</p>
@@ -103,13 +88,10 @@ export default function Hea_Der() {
           </div>
           <div className="notification-div">
             <div className="notification-left">
-              <img
-                src="nfc.png"
-                alt=""
-              />
+              <img src="nfc.png" alt="" />
             </div>
             <div className="right">
-              <p >Payment completed</p>
+              <p>Payment completed</p>
               <span>2 days ago</span>
             </div>
           </div>
@@ -185,7 +167,11 @@ export default function Hea_Der() {
         </div>
         <div className="notification-mobile">
           {contextHolderMobile}
-          <Badge count={4} size="small" onClick={() => openNotification1('top')}>
+          <Badge
+            count={4}
+            size="small"
+            onClick={() => openNotification1('top')}
+          >
             <NotificationFilled />
           </Badge>
         </div>
