@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import { Breadcrumb, Input, Badge, notification,Button, Drawer } from 'antd';
+import { Breadcrumb, Input, Badge, notification, Button, Drawer } from 'antd';
 import {
   SearchOutlined,
   UserOutlined,
   SettingFilled,
   NotificationFilled,
-  MenuOutlined
+  MenuOutlined,
 } from '@ant-design/icons';
 import { useState } from 'react';
 import SideBar from './SideBar';
@@ -116,8 +116,6 @@ export default function Hea_Der() {
     });
   };
 
-  
-
   return (
     <div className="headerContainer">
       <div className="antBreadcrumb">
@@ -156,33 +154,10 @@ export default function Hea_Der() {
           </div>
         </div>
 
-        <div className="hamburger">
-          <MenuOutlined onClick={showDrawer}></MenuOutlined>
-          <Drawer
-            // title="Basic Drawer"
-            placement="left"
-            onClose={onClose}
-            open={open}
-            closable={false}
-            width="80%"
-            className='sideDrawer'
-          >
-           <SideBar></SideBar>
-          </Drawer>
-        </div>
+        <Hamburger showDrawer={showDrawer} onClose={onClose} open={open} />
 
         <div className="settings">
           <SettingFilled onClick={showDrawer} />
-          {/* <Drawer
-            title="Basic Drawer"
-            placement="right"
-            onClose={onClose}
-            open={open}
-          >
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-          </Drawer> */}
         </div>
 
         <div className="notification">
@@ -202,6 +177,24 @@ export default function Hea_Der() {
           </Badge>
         </div>
       </div>
+    </div>
+  );
+}
+
+function Hamburger({ showDrawer, onClose, open }) {
+  return (
+    <div className="hamburger">
+      <MenuOutlined onClick={showDrawer}></MenuOutlined>
+      <Drawer
+        placement="left"
+        onClose={onClose}
+        open={open}
+        closable={false}
+        width="80%"
+        className="sideDrawer"
+      >
+        <SideBar></SideBar>
+      </Drawer>
     </div>
   );
 }
